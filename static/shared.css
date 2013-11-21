@@ -1,0 +1,14 @@
+body {
+  font-family: monospace;
+}
+
+fieldset {
+  float: left;
+  margin: 0;
+  width: 50%;
+  -moz-box-sizing:border-box;
+}
+
+textarea {
+  width: 100%;
+}
