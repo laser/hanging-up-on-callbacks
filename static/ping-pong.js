@@ -1,6 +1,6 @@
 function* makeGenerator() {
   while (true) {
-    var msg = yield;
+    var msg = yield void(0);
     log(msg);
   }
 }
