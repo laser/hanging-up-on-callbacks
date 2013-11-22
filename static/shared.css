@@ -6,6 +6,7 @@ fieldset {
   float: left;
   margin: 0;
   width: 50%;
+  box-sizing: border-box;
   -moz-box-sizing:border-box;
 }
 
