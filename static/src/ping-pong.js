@@ -1,4 +1,4 @@
-function makeGenerator() {
+function* makeGenerator() {
   while (true) {
     var msg = yield;
     log(msg);
@@ -9,9 +9,9 @@ var generator = makeGenerator();
 generator.next();
 
 log('ping');
-generator.send('pong');
+generator.next('pong');
 log('ping');
-generator.send('pong');
+generator.next('pong');
 log('ping');
-generator.send('pong');
+generator.next('pong');
 log('ping');

@@ -1,5 +1,5 @@
 from bottle import static_file, route, run
-@route('/static/<filename>')
+@route('/static/<filename:path>')
 def server_static(filename):
   return static_file(filename, root='./static')
 
