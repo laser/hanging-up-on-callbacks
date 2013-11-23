@@ -4,6 +4,6 @@ function* powGenerator() {
 }
 
 var g = powGenerator();
-log(g.next().value);
-log(g.next(10).value);
-log(g.next(2).value);
+log(g.next().value);   // null, from the first yield
+log(g.next(10).value); // null, from the second
+log(g.next(2).value);  // 100, the result
