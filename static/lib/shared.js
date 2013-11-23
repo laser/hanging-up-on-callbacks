@@ -12,10 +12,6 @@ function showSource(path, outputElId) {
 }
 
 function log(o) {
-  if (!!!o) {
-    o = "";
-  }
-
   var x = document.getElementById('output');
-  x.innerHTML += (o.toString() + '\n');
+  x.innerHTML += ('' + o + '\n');
 }
