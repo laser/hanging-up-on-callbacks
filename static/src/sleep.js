@@ -1,12 +1,10 @@
-function sleep(ms) {
-  setTimeout(function() {
-    gen.next(); // resume the generator
-  }, ms);
+function resume() {
+  gen.next();
 }
 
 var gen = function* () {
   log('foo');
-  yield sleep(1000); // suspend the generator
+  yield setTimeout(resume, 1000); // suspend the generator
   log('baz');
 };
 
