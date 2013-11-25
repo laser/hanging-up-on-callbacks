@@ -10,14 +10,6 @@ Examples of ES6 generators:
 1. Fake synchronicity ("blocking sleep()")
 1. Centralized exception handling
 
-How to run the demo
--------------------
-
-1. clone the repo
-1. python ./server.py
-1. http://localhost:8080/static/index.html
-1. click through the examples
-
 Punchline
 ---------
 
@@ -34,3 +26,19 @@ console.log('blix');
 // console: 'foo', 'blix', 'bax'
 
 ```
+
+How to run the demo
+-------------------
+
+1. download and install [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html)
+1. clone the repo
+1. python ./server.py
+1. http://localhost:8080/static/index.html
+1. click through the examples
+
+Inspirations
+------------
+
+1. [Generators versus Fibers](http://howtonode.org/generators-vs-fibers)
+1. [Trampolines in JavaScript](http://tobyho.com/2010/12/10/trampolines-in-javascript-and/)
+1. [ES6 Draft: Generators](http://wiki.ecmascript.org/doku.php?id=harmony:generators)
