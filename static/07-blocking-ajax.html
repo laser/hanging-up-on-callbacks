@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Blocking Ajax</title>
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+  <h1>Blocking Ajax</h1>
+  <p><a href="index.html">Home</a></p>
+  <fieldset>
+    <legend>Output</legend>
+    <textarea id="output" rows="20" cols="40"></textarea>
+  </fieldset>
+  <fieldset>
+    <legend>Source</legend>
+    <textarea id="source" rows="20" cols="40"></textarea>
+  </fieldset>
+  <script src="vendor/jquery-2.0.3.js" type="application/javascript"></script>
+  <script src="src/shared.js" type="application/javascript"></script>
+  <script src="src/ajax.js" type="application/javascript"></script>
+  <script type="text/javascript">
+    showSource("src/ajax.js", "source");
+  </script>
+</body>
+</html>
