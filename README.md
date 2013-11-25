@@ -17,3 +17,20 @@ How to run the demo
 1. python ./server.py
 1. http://localhost:8080/static/index.html
 1. click through the examples
+
+Punchline
+---------
+
+```javascript
+
+sync(function* (resume) {
+  console.log('foo');
+  yield setTimeout(resume, 1000);
+  console.log('baz');
+});
+
+console.log('blix');
+
+// console: 'foo', 'blix', 'bax'
+
+```
