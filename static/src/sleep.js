@@ -1,13 +1,18 @@
-function resume() {
-  gen.next();
+function sync(gen) {
+  var iterable, resume;
+
+  resume = function() {
+    iterable.next();
+  };
+
+  iterable = gen(resume);
+  iterable.next();
 }
 
-var gen = function* () {
+sync(function* (resume) {
   log('foo');
   yield setTimeout(resume, 1000); // suspend the generator
   log('baz');
-};
+});
 
-gen = gen(); // activate the generator
-gen.next();  // run it...
 log('blix'); // just the generator is suspended!
