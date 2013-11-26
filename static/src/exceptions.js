@@ -14,6 +14,7 @@ var gen = function* () {
   }
   catch (e) {
     log(e);
+    throw(e);
   }
 };
 
