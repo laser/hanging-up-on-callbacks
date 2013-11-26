@@ -23,6 +23,6 @@ function sync(gen) {
 }
 
 sync(function* (resume) {
-  var resp = yield _get("http://localhost:8080/static/index.html", resume); // suspend the generator
+  var resp = yield _get("index.html", resume); // suspend the generator
   log(resp);
 });
