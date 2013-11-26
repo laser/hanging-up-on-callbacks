@@ -32,8 +32,8 @@ How to run the demo
 
 1. download and install [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html)
 1. clone the repo
-1. gem install sinatra
-1. ruby ./app.rb
+1. bundle
+1. bundle exec ruby ./app.rb
 1. http://localhost:4567
 1. click through the examples
 
