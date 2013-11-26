@@ -1,6 +1,6 @@
 function* powGenerator() {
   var result = Math.pow(yield "a", yield "b");
-  yield result;
+  return result;
 }
 
 var g = powGenerator();
