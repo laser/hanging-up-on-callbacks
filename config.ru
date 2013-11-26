@@ -1,9 +1,2 @@
-require 'rubygems'
-require 'bundler'
-
-Bundler.require
-
-#\ -w -p 8080
-
-require './app.rb'
+require './app'
 run Sinatra::Application
