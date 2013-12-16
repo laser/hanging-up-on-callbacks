@@ -12,10 +12,27 @@ function _get(url, callback) {
 }
 
 function sync(gen) {
-  var iterable, resume;
+  var iterable, resume, check, vals, ops;
 
-  resume = function(err, data) {
-    iterable.next(data);
+  vals = [];
+  ops  = 0;
+
+  check = function() {
+    if (vals.length == ops) {
+      if (ops == 1) iterable.next(vals[0]);
+      else iterable.next(vals);
+    }
+  }
+
+  resume = function(err, retVal) {
+    var slot = ops;
+    ops++;
+
+    return function(err, retVal) {
+      if (err) iterable.raise(err);
+      vals[slot] = retVal;
+      check();
+    };
   };
 
   iterable = gen(resume);
@@ -23,6 +40,6 @@ function sync(gen) {
 }
 
 sync(function* (resume) {
-  var resp = yield _get("index.html", resume); // suspend the generator
-  log(resp);
+  var responses = yield [_get("index.html", resume()), _get("shared.css", resume())]
+  log(responses);
 });
