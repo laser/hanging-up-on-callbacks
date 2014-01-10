@@ -1,5 +1,5 @@
-function* fibonacci() {
-  var a = 0, b = 1, c = 0;
+function* fibonacci(z) {
+  var a = z, b = a + 1, c = a;
 
   while (true) {
     yield a;
@@ -9,7 +9,7 @@ function* fibonacci() {
   }
 }
 
-var seq = fibonacci();
+var seq = fibonacci(0);
 log(seq.next().value); // 0
 log(seq.next().value); // 1
 log(seq.next().value); // 1
