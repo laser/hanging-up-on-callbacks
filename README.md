@@ -30,7 +30,6 @@ console.log('blix');
 How to run the demo
 -------------------
 
-1. download and install [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html)
 1. clone the repo
 1. bundle
 1. bundle exec ruby ./app.rb
